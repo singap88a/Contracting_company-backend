@@ -16,6 +16,9 @@ app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 app.use(cors());
 
 // Define Routes
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/projects', require('./routes/projectRoutes'));
 app.use('/api/services', require('./routes/serviceRoutes'));
