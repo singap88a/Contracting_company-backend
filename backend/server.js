@@ -26,11 +26,9 @@ app.use('/api/contact', require('./routes/contactRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
-// Serve static assets in production
-// (Placeholder for future build steps)
+// 🚫 شيل app.listen من هنا
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-
+// ✅ خليه Serverless
 module.exports = app;
