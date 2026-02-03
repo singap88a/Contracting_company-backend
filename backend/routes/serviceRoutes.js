@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
 // @desc    Create a service
 // @access  Private
 router.post('/', auth, async (req, res) => {
-    const { name, description, icon, image } = req.body;
+    const { name, description, icon, image, category } = req.body;
 
     try {
         const processedImage = await processImage(image);
@@ -56,7 +56,8 @@ router.post('/', auth, async (req, res) => {
             name,
             description,
             icon,
-            image: processedImage
+            image: processedImage,
+            category
         });
 
         const service = await newService.save();
@@ -71,7 +72,7 @@ router.post('/', auth, async (req, res) => {
 // @desc    Update a service
 // @access  Private
 router.put('/:id', auth, async (req, res) => {
-    const { name, description, icon, image } = req.body;
+    const { name, description, icon, image, category } = req.body;
 
     // Build service object
     const serviceFields = {};
@@ -79,6 +80,7 @@ router.put('/:id', auth, async (req, res) => {
     if (description) serviceFields.description = description;
     if (icon) serviceFields.icon = icon;
     if (image) serviceFields.image = image;
+    if (category) serviceFields.category = category;
 
     try {
         if (image) {

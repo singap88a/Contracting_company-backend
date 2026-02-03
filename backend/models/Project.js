@@ -8,7 +8,9 @@ const ProjectSchema = new mongoose.Schema({
     subtitle: String,
     category: {
         type: String,
-        required: true
+        required: true,
+        enum: ['contracting', 'safety'],
+        default: 'contracting'
     },
     location: String,
     client: String,

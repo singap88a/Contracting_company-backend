@@ -9,7 +9,7 @@ const ServiceRequest = require('../models/ServiceRequest');
 router.post('/', async (req, res) => {
     const { 
         fullName, mobile, email, serviceType, 
-        city, budget, area, projectDescription 
+        city, budget, area, projectDescription, category
     } = req.body;
 
     try {
@@ -21,7 +21,8 @@ router.post('/', async (req, res) => {
             city,
             budget,
             area,
-            projectDescription
+            projectDescription,
+            category
         });
 
         const request = await newRequest.save();

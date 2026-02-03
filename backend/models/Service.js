@@ -16,6 +16,12 @@ const ServiceSchema = new mongoose.Schema({
     image: {
         type: String
     },
+    category: {
+        type: String,
+        required: true,
+        enum: ['contracting', 'safety'],
+        default: 'contracting'
+    },
     createdAt: {
         type: Date,
         default: Date.now

@@ -17,6 +17,10 @@ const ServiceRequestSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        enum: ['contracting', 'safety']
+    },
     city: {
         type: String,
         required: true
