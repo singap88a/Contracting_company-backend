@@ -29,6 +29,7 @@ app.use('/api/contact', require('./routes/contactRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 app.use('/api/settings', require('./routes/settingsRoutes'));
 app.use('/api/team', require('./routes/teamRoutes'));
+app.use('/api/testimonials', require('./routes/testimonialRoutes'));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
