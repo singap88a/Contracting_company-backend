@@ -23,9 +23,8 @@ jobs:
     with:
       app_name: redan ## repository name must be lowercase
 
-    secrets:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    secrets: inherit
+      
 
     
 
