@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Build:
+  use-center:
     uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Build.yml@main
 
     with:
