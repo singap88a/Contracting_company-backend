@@ -6,17 +6,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  use-center:
+  use-central:
     uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Build.yml@main
 
     with:
       app_name: Redan
-
-    secrets:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
-    
 
     
 
