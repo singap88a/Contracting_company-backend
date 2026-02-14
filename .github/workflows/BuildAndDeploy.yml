@@ -25,7 +25,7 @@ jobs:
 
     secrets: 
       IP_MASTER: ${{ secrets.IP_MASTER }}
-      PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       
 
     
