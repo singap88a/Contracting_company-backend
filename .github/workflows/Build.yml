@@ -12,6 +12,10 @@ jobs:
     with:
       app_name: Redan
 
+    secrets:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
     
 
 
