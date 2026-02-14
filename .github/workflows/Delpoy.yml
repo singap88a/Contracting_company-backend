@@ -1,0 +1,20 @@
+name: Deploy Application
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backend/docker-compose.yml'
+  workflow_dispatch:
+
+jobs:
+  Deploy:
+    needs: Build
+    uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Deploy.yml@main
+
+    with:
+      app_name: redan ## repository name must be lowercase
+
+    secrets: 
+      IP_MASTER: ${{ secrets.IP_MASTER }}
+      SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+    
