@@ -24,8 +24,8 @@ jobs:
       app_name: redan ## repository name must be lowercase
 
     secrets: 
-      DOCKER_USERNAME: ${{ secrets.IP_MASTER }}
-      DOCKER_PASSWORD: ${{ secrets.PRIVATE_KEY }}
+      IP_MASTER: ${{ secrets.IP_MASTER }}
+      PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       
 
     
