@@ -10,7 +10,7 @@ jobs:
     uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Build.yml@main
 
     with:
-      app_name: Redan
+      app_name: redan # repository name must be lowercase
 
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
