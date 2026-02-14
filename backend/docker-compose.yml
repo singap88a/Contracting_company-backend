@@ -6,7 +6,7 @@ services:
     image: nginx:1.24-alpine
     container_name: my-web-app
     ports:
-      - "8080:80"
+      - "80:80"
 
 
 
