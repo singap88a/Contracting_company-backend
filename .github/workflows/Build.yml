@@ -7,7 +7,7 @@ on:
 
 jobs:
   use-central:
-    uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Build.yml@main
+    uses: ${{ secrets.G_UserName }}/${{ secrets.Folder_Name }}/.github/workflows/Build.yml@main
 
     with:
       app_name: redan # repository name must be lowercase
