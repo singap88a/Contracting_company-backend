@@ -1,0 +1,12 @@
+name: Call DevOps Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  use-central:
+    uses: redasaad123/CI-CD-GitHub-Action/.github/workflows/Build.yml@main
+
+    with:
+      app_name: Redan
